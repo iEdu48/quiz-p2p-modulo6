@@ -1,0 +1,18 @@
+<h4>Autores:</h4>
+<br/>
+<% if (autores.length > 0) { %>
+<table border="1" width="100%">
+    <tr>
+        <th>Autor</th>
+        <th>Foto</th>
+        <th>Video</th>
+    </tr>
+    <% for(var i=0; i < autores.length; i++) { %>
+    <tr>
+        <td><p><%= autores[i].nombre %></p></td>
+        <td><img src='<%= autores[i].imagen %>' alt="Poner aquí la foto del autor" style='width:90px;height:90px;'></td>
+        <td><video src='<%= autores[i].video %>' alt="Poner aquí video 30 seg." autoplay style='width:110px;'></video></td>
+    </tr>
+    <% } %>
+</table>
+<% } %>
